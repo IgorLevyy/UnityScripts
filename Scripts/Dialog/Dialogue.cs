@@ -8,7 +8,13 @@ public class Dialogue : MonoBehaviour
     public bool ShowDialogue = false;
     public int currentDialogue = 0;
     private float zom;
+    public GUISkin skin;
+    public Font font;
 
+    void Start()
+    {
+        GUI.skin.font = font;
+    }
     private void Update()
     {
         zom = Input.GetAxis("Mouse ScrollWheel");
@@ -57,7 +63,9 @@ public class Dialogue : MonoBehaviour
     }
     void OnGUI()
     {
+        GUI.skin.font = font;
         Color color = GUI.backgroundColor;
+        GUI.skin = skin;
         if (ShowDialogue == true)
         {
             GUI.Box(new Rect(Screen.width / 2 - 600, Screen.height - 500, 1200, 450), "");

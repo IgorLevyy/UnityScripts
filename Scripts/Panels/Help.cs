@@ -13,7 +13,7 @@ public class Help : MonoBehaviour {
     // GameObject test = GameObject.FindGameObjectWithTag("Player");
     void Start ()
     {
-
+        GUI.skin.font = font;
     }
 	
 	// Update is called once per frame
@@ -80,6 +80,7 @@ public class Help : MonoBehaviour {
 
     void HelpBody(int id)
     {
+        GUI.skin.font = font;
         Color color = GUI.backgroundColor;
 
         GUI.Label(new Rect(10, 25, Screen.width, Screen.height), "Обзор - Мышь.\nВперед: W. Назад: S. Влево: A. Вправо: D. Вверх: Q. Вниз: E"
