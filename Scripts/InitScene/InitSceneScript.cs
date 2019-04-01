@@ -372,21 +372,28 @@ public class InitSceneScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.J))
         {
             MouseLook scriptMouseLook = gameObject.GetComponent<MouseLook>();
-            if (Cursor.visible == true)
-            {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                scriptMouseLook.enabled = true;
-            }
-            else
-            {
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-                scriptMouseLook.enabled = false;
-            }
+            Zoom scriptZoom = GameObject.Find("Player").GetComponent<Zoom>();
+
 
             GameObject mainCamera = GameObject.Find("Main Camera");
             Dialogue dialogueScript = mainCamera.GetComponent<Dialogue>();
+
+            if (dialogueScript.ShowDialogue == true)
+            {
+                //Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
+                scriptMouseLook.enabled = true;
+                scriptZoom.enabled = true;
+            }
+            else
+            {
+               // Cursor.visible = true;
+               // Cursor.lockState = CursorLockMode.None;
+                scriptMouseLook.enabled = false;
+                scriptZoom.enabled = false;
+            }
+
+          
 
             if (dialogueScript.ShowDialogue == true)
             {
@@ -404,7 +411,7 @@ public class InitSceneScript : MonoBehaviour {
                     SpeakEnd = true,
 
                     ActionRef = "e9477766-93dc-497d-a7e0-91ab73dcaab5",
-                    ElementRef = "",
+                    ElementRef = Guid.Empty.ToString(),
                     InventoryItemRef = "41a454ad-e7cb-4785-a4d5-d969f42abb81"
                 };
                 Answer ans0_2 = new Answer
@@ -414,7 +421,7 @@ public class InitSceneScript : MonoBehaviour {
                     SpeakEnd = true,
 
                     ActionRef = "e474abb8-b273-48ec-b138-131c28ca0826",
-                    ElementRef = "",
+                    ElementRef = Guid.Empty.ToString(),
                     InventoryItemRef = "41a454ad-e7cb-4785-a4d5-d969f42abb81"
                 };
                 Answer ans0_3 = new Answer
@@ -424,7 +431,7 @@ public class InitSceneScript : MonoBehaviour {
                     SpeakEnd = true,
 
                     ActionRef = "e20b60e8-b7a1-4ed0-ba4b-c315c0d20149",
-                    ElementRef = "",
+                    ElementRef = Guid.Empty.ToString(),
                     InventoryItemRef = "41a454ad-e7cb-4785-a4d5-d969f42abb81"
                 };
                 Answer ans0_4 = new Answer

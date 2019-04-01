@@ -35,7 +35,7 @@ public class ActionWithObject
 public class Actions : MonoBehaviour
 {
 
-    public static bool show = false;
+    public static bool showAction = false;
     public GUISkin skin;
     Vector2 scrollPosition;
     public Font font;
@@ -44,7 +44,8 @@ public class Actions : MonoBehaviour
     public static string currentObject;
     public static string currentInventory;
     public static Option option;
-
+    private int currentAction = 0;
+    private float zom;
     //public List<ActionWithObject> actions = new List<ActionWithObject>();
 
     // Use this for initialization
@@ -287,7 +288,7 @@ public class Actions : MonoBehaviour
             parameter = JsonUtility.ToJson(new Vector3(0f, 0f, 5.519f)),
 
             ActionRef = "44dfc5e7-1da0-48c6-b0b3-ce2e3367db17",
-            ElementRef = "128650fb-bfcf-425c-921a-f000412369a8",
+            ElementRef = "f72f3d59-82e5-4da4-87f0-4d6ce0b63a13",
             InventoryItemRef = "e090b2c4-5f70-4674-be3f-c373589fd82d"
         };
 
@@ -453,9 +454,9 @@ public class Actions : MonoBehaviour
             typeEvent = "DestroyObject",
             parameter = "",
 
-            ActionRef = "",
-            ElementRef = "",
-            InventoryItemRef = ""
+            ActionRef = "a81d97af-164e-4fa6-8d22-10c011f74b25",
+            ElementRef = "f72f3d59-82e5-4da4-87f0-4d6ce0b63a13",
+            InventoryItemRef = "e090b2c4-5f70-4674-be3f-c373589fd82d"
         };
 
         var optionDestroyTable = new Option()
@@ -480,9 +481,9 @@ public class Actions : MonoBehaviour
             typeEvent = "UseTable",
             parameter = "Твердое тело1 1087",
 
-            ActionRef = "",
-            ElementRef = "",
-            InventoryItemRef = ""
+            ActionRef = "864677cd-7673-4ead-b78c-caba4f7e1ff9",
+            ElementRef = "b55f81bb-f4aa-40ef-928f-388b63789540",
+            InventoryItemRef = "69b27162-b364-43d2-ba19-71d07b560fbf"
         };
 
         var optionUseLadder = new Option()
@@ -542,17 +543,45 @@ public class Actions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        zom = Input.GetAxis("Mouse ScrollWheel");
+
+        if (zom < 0)
+        {
+            //print(currentButton);
+            if (currentAction < option.actions.Count - 1)
+            {
+                currentAction++;
+            }
+            // currItem = items[currentButton];
+        }
+
+        if (zom > 0)
+        {
+            //print(currentButton);
+            if (currentAction > 0)
+            {
+                currentAction--;
+            }
+            //currItem = items[currentButton];
+        }
+        if (Input.GetMouseButtonDown(0) && showAction && !GameObject.Find("Player").GetComponent<Zoom>().enabled)
+        {
+            int i = currentAction;
+
+            DoAction(option.actions[i]);
+        }
     }
 
     void OnGUI()
     {
-        if (show)
+        if (showAction)
         {
             MouseLook scriptMouseLook = GameObject.Find("Player").GetComponent<MouseLook>();
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Zoom scriptZoom = GameObject.Find("Player").GetComponent<Zoom>();
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
             scriptMouseLook.enabled = false;
+            scriptZoom.enabled = false;
 
             GUI.skin = skin;
             GUI.skin.font = font;
@@ -565,18 +594,39 @@ public class Actions : MonoBehaviour
         scrollPosition = GUILayout.BeginScrollView(
            scrollPosition, GUILayout.Width(690), GUILayout.Height(180));
 
+        Color color = GUI.backgroundColor;
+
         for (int i = 0; i < option.actions.Count; i++)
         {
-            if (option.actions[i] != null)
+            if (i != currentAction)
             {
-                if (GUILayout.Button(option.actions[i].name))
+                if (option.actions[i] != null)
                 {
-                    DoAction(option.actions[i]);
+                    if (GUILayout.Button(option.actions[i].name))
+                    {
+                        DoAction(option.actions[i]);
+                    }
                 }
-            }
-            else
+                else
+                {
+                    GUILayout.Box("", GUILayout.Width(100f), GUILayout.Height(100f));
+                }
+            } else
             {
-                GUILayout.Box("", GUILayout.Width(100f), GUILayout.Height(100f));
+                GUI.backgroundColor = Color.green;
+                if (option.actions[i] != null)
+                {
+                    if (GUILayout.Button(option.actions[i].name))
+                    {
+                        DoAction(option.actions[i]);
+                    }
+                }
+                else
+                {
+                    GUILayout.Box("", GUILayout.Width(100f), GUILayout.Height(100f));
+                }
+                GUI.backgroundColor = color;
+
             }
         }
                        
@@ -589,9 +639,11 @@ public class Actions : MonoBehaviour
         SW.Start();
 
         MouseLook scriptMouseLook = GameObject.Find("Player").GetComponent<MouseLook>();
+        Zoom scriptZoom = GameObject.Find("Player").GetComponent<Zoom>();
         scriptMouseLook.enabled = true;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        scriptZoom.enabled = true;
+       //Cursor.visible = false;
+       //Cursor.lockState = CursorLockMode.Locked;
 
         GameObject gameObjectUnityApi = GameObject.Find("UnityAPI");
         UnityApiScript unityApiScript = gameObjectUnityApi.GetComponent<UnityApiScript>();
@@ -774,7 +826,11 @@ public class Actions : MonoBehaviour
             timeExecution = SW.ElapsedMilliseconds.ToString()
         });
 
-        show = false;
+        showAction = false;
+        
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.None;
+        
     }
 
 }

@@ -74,7 +74,7 @@ public class ObjectClicker : MonoBehaviour
                                         else
                                         {
                                             Actions.option = option;
-                                            Actions.show = true;
+                                            Actions.showAction = true;
                                         }
                                         
                                         break;

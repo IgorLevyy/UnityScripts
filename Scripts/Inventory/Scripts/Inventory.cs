@@ -266,7 +266,7 @@ public class Inventory : MonoBehaviour
             GUI.Window(0, new Rect(Screen.width / 4, Screen.height / 4, Screen.width / 2, Screen.height / 2), InventoryBody, "Inventory");
         }
     }
-    public void Use(Item item)
+    public void Use(Item item) 
     {
         item.count--;
         RemoveItem(item);
@@ -487,11 +487,31 @@ public class Inventory : MonoBehaviour
 
         GUILayout.EndArea();
 
-        GUI.Label(new Rect(Screen.width / 4.75f, Screen.height / 4, Screen.width / 4f, Screen.height / 11), "Для использования предмета нажмите левую кнопку мыши");
+        //Изменение размера текста на разных экранах
 
-        GUI.Label(new Rect(Screen.width / 4.75f, Screen.height / 3.5f, Screen.width / 4f, Screen.height / 11), "Для отмены выбора предмета нажмите правую кнопку мыши");
+        GUIStyle gUIStyle1 = new GUIStyle("Label");
+        int sizeF = gUIStyle1.fontSize;
 
-        GUI.Label(new Rect(Screen.width / 4.75f, Screen.height / 3.1f, Screen.width / 4f, Screen.height / 11), "Для выбора предмета используйте колесо мыши");
+        if (Screen.width > 1500) {
+
+        }
+        else if(Screen.width > 1000 && Screen.width < 1500)
+        {
+            gUIStyle1.fontSize = 13;
+        }
+        else if (Screen.width < 1000)
+        {
+            gUIStyle1.fontSize = 10;
+        }
+        //gUIStyle1.fontSize = 15;
+
+
+
+        GUI.Label(new Rect(Screen.width / 4.75f, Screen.height / 4, Screen.width / 3f, Screen.height / 11), "Для использования предмета нажмите левую кнопку мыши", gUIStyle1);
+
+        GUI.Label(new Rect(Screen.width / 4.75f, Screen.height / 3.5f, Screen.width / 3f, Screen.height / 11), "Для отмены выбора предмета нажмите правую кнопку мыши", gUIStyle1);
+
+        GUI.Label(new Rect(Screen.width / 4.75f, Screen.height / 3.1f, Screen.width / 3f, Screen.height / 11), "Для выбора предмета используйте колесо мыши", gUIStyle1);
 
 
         /*
