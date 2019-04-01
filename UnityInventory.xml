@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ObjectClick>
+	<InventoryItems>
+		<InventoryItem>
+			<InventoryName>Не определен</InventoryName>
+			<Options>
+				<Option>
+					<TargetObject>key</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="0d97e02a-1d60-4d7d-b980-8f7737e55a6e" ElementRef="128650fb-bfcf-425c-921a-f000412369a8" InventoryItemRef="">
+							<Name>Включить QF1</Name>
+							<ObjectName>key</ObjectName>
+							<LogName>Включен</LogName>
+							<TypeEvent>Rotate</TypeEvent>
+							<Parameter>{"x":0.0,"y":0.0,"z":25.0}</Parameter>
+						</ActionWithObject>
+						<ActionWithObject ActionRef="4b46ad1e-5cc8-41cd-8dd1-272f6bd385ab" ElementRef="128650fb-bfcf-425c-921a-f000412369a8" InventoryItemRef="">
+							<Name>Выключить QF1</Name>
+							<ObjectName>key</ObjectName>
+							<LogName>Выключен</LogName>
+							<TypeEvent>Rotate</TypeEvent>
+							<Parameter>{"x":0.0,"y":0.0,"z":-25.0}</Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>Твердое тело1 1638</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="0d97e02a-1d60-4d7d-b980-8f7737e55a6e" ElementRef="f72f3d59-82e5-4da4-87f0-4d6ce0b63a13" InventoryItemRef="">
+							<Name>Включить QF2</Name>
+							<ObjectName>Твердое тело1 1638</ObjectName>
+							<LogName>Включен</LogName>
+							<TypeEvent>Rotate</TypeEvent>
+							<Parameter>{"x":0.0,"y":0.0,"z":25.0}</Parameter>
+						</ActionWithObject>
+						<ActionWithObject ActionRef="4b46ad1e-5cc8-41cd-8dd1-272f6bd385ab" ElementRef="f72f3d59-82e5-4da4-87f0-4d6ce0b63a13" InventoryItemRef="">
+							<Name>Выключить QF2</Name>
+							<ObjectName>Твердое тело1 1638</ObjectName>
+							<LogName>Выключен</LogName>
+							<TypeEvent>Rotate</TypeEvent>
+							<Parameter>{"x":0.0,"y":0.0,"z":-25.0}</Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>Твердое тело1 1639</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="0d97e02a-1d60-4d7d-b980-8f7737e55a6e" ElementRef="edec83c7-e3b3-4576-af92-53bee28a03d1" InventoryItemRef="">
+							<Name>Включить QF3</Name>
+							<ObjectName>Твердое тело1 1639</ObjectName>
+							<LogName>Включен</LogName>
+							<TypeEvent>Rotate</TypeEvent>
+							<Parameter>{"x":0.0,"y":0.0,"z":25.0}</Parameter>
+						</ActionWithObject>
+						<ActionWithObject ActionRef="4b46ad1e-5cc8-41cd-8dd1-272f6bd385ab" ElementRef="edec83c7-e3b3-4576-af92-53bee28a03d1" InventoryItemRef="">
+							<Name>Выключить QF3</Name>
+							<ObjectName>Твердое тело1 1638</ObjectName>
+							<LogName>Выключен</LogName>
+							<TypeEvent>Rotate</TypeEvent>
+							<Parameter>{"x":0.0,"y":0.0,"z":-25.0}</Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>Твердое тело1 1513</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="4b583a91-ebea-45ad-9540-a34b3486a500" ElementRef="441cf9b5-c234-4c62-9b58-be019c92faec" InventoryItemRef="">
+							<Name>Вытащить предохранитель 0,4 кв трансформатора FU4</Name>
+							<ObjectName>Твердое тело1 1513</ObjectName>
+							<LogName>Скрыто</LogName>
+							<TypeEvent>HideObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>Твердое тело1 1536</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="4b583a91-ebea-45ad-9540-a34b3486a500" ElementRef="5c545b9b-9e83-43f0-a4e2-fcc69698421b" InventoryItemRef="">
+							<Name>Вытащить предохранитель 0,4 кв трансформатора FU5</Name>
+							<ObjectName>Твердое тело1 1536</ObjectName>
+							<LogName>Скрыто</LogName>
+							<TypeEvent>HideObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>Твердое тело1 1559</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="4b583a91-ebea-45ad-9540-a34b3486a500" ElementRef="e12d72dc-4ad9-411a-afba-c6c80823fa9c" InventoryItemRef="">
+							<Name>Вытащить предохранитель 0,4 кв трансформатора FU6</Name>
+							<ObjectName>Твердое тело1 1559</ObjectName>
+							<LogName>Скрыто</LogName>
+							<TypeEvent>HideObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>Табличка &lt;Не включать, работают люди&gt; SRF3 2</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="a81d97af-164e-4fa6-8d22-10c011f74b25" ElementRef="f72f3d59-82e5-4da4-87f0-4d6ce0b63a13" InventoryItemRef="">
+							<Name>Убрать плакать Не включать - работают люди</Name>
+							<ObjectName>Табличка &lt;Не включать, работают люди&gt; SRF3 2</ObjectName>
+							<LogName>Убрать</LogName>
+							<TypeEvent>DestroyObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+			</Options>
+		</InventoryItem>
+		<InventoryItem>
+			<InventoryName>Патрон предохранителя_инвентарь</InventoryName>
+			<Options>
+				<Option>
+					<TargetObject>предох прозр1</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="f9f88514-a069-40d3-900d-b6415ec30baa" ElementRef="441cf9b5-c234-4c62-9b58-be019c92faec" InventoryItemRef="ed5353fa-53bd-4e20-ae4c-0d3ea960936b">
+							<Name>Поставить на место предохранитель 0,4 кв трансформатора FU4</Name>
+							<ObjectName>Твердое тело1 1513</ObjectName>
+							<LogName>Отображено</LogName>
+							<TypeEvent>UnHideObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>предох прозр2</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="f9f88514-a069-40d3-900d-b6415ec30baa" ElementRef="5c545b9b-9e83-43f0-a4e2-fcc69698421b" InventoryItemRef="ed5353fa-53bd-4e20-ae4c-0d3ea960936b">
+							<Name>Поставить на место предохранитель 0,4 кв трансформатора FU5</Name>
+							<ObjectName>Твердое тело1 1536</ObjectName>
+							<LogName>Отображено</LogName>
+							<TypeEvent>UnHideObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>предох прозр3</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="f9f88514-a069-40d3-900d-b6415ec30baa" ElementRef="e12d72dc-4ad9-411a-afba-c6c80823fa9c" InventoryItemRef="ed5353fa-53bd-4e20-ae4c-0d3ea960936b">
+							<Name>Поставить на место предохранитель 0,4 кв трансформатора FU6</Name>
+							<ObjectName>Твердое тело1 1559</ObjectName>
+							<LogName>Отображено</LogName>
+							<TypeEvent>UnHideObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+			</Options>
+		</InventoryItem>
+		<InventoryItem>
+			<InventoryName>Табличка &lt;Не включать, работают люди&gt;</InventoryName>
+			<Options>
+				<Option>
+					<TargetObject>SRF3 2</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="44dfc5e7-1da0-48c6-b0b3-ce2e3367db17" ElementRef="f72f3d59-82e5-4da4-87f0-4d6ce0b63a13" InventoryItemRef="e090b2c4-5f70-4674-be3f-c373589fd82d">
+							<Name>Вывесить плакат Не включать-работают люди</Name>
+							<ObjectName>Табличка &lt;Не включать, работают люди&gt;</ObjectName>
+							<LogName>Повесить</LogName>
+							<TypeEvent>UseTable</TypeEvent>
+							<Parameter>SRF3 2</Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+			</Options>
+		</InventoryItem>
+		<InventoryItem>
+			<InventoryName>Лестница</InventoryName>
+			<Options>
+				<Option>
+					<TargetObject>Твердое тело1 1087</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="864677cd-7673-4ead-b78c-caba4f7e1ff9" ElementRef="b55f81bb-f4aa-40ef-928f-388b63789540" InventoryItemRef="69b27162-b364-43d2-ba19-71d07b560fbf">
+							<Name>Поставить лестницу</Name>
+							<ObjectName>Лестница</ObjectName>
+							<LogName>Поставить</LogName>
+							<TypeEvent>UseTable</TypeEvent>
+							<Parameter>Твердое тело1 1087</Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+			</Options>
+		</InventoryItem>
+		<InventoryItem>
+			<InventoryName>УНН-1ДС3</InventoryName>
+			<Options>
+				<Option>
+					<TargetObject>SRF3 1</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="1f04b482-a6ec-4acb-af71-124f6bdfe23e" ElementRef="128650fb-bfcf-425c-921a-f000412369a8" InventoryItemRef="c16c2173-b8b6-4630-b5f3-72e6e236f79e">
+							<Name>Проверить напряжение автомата QF1</Name>
+							<ObjectName>Указатель напряжения ниже 1000в (УНН-10)</ObjectName>
+							<LogName>Проверить</LogName>
+							<TypeEvent>Check</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>SRF3 2</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="1f04b482-a6ec-4acb-af71-124f6bdfe23e" ElementRef="f72f3d59-82e5-4da4-87f0-4d6ce0b63a13" InventoryItemRef="c16c2173-b8b6-4630-b5f3-72e6e236f79e">
+							<Name>Проверить напряжение автомата QF2</Name>
+							<ObjectName>Указатель напряжения ниже 1000в (УНН-10)</ObjectName>
+							<LogName>Проверить</LogName>
+							<TypeEvent>Check</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+				<Option>
+					<TargetObject>SRF3 3</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="1f04b482-a6ec-4acb-af71-124f6bdfe23e" ElementRef="edec83c7-e3b3-4576-af92-53bee28a03d1" InventoryItemRef="c16c2173-b8b6-4630-b5f3-72e6e236f79e">
+							<Name>Проверить напряжение автомата QF3</Name>
+							<ObjectName>Указатель напряжения ниже 1000в (УНН-10)</ObjectName>
+							<LogName>Проверить</LogName>
+							<TypeEvent>Check</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
+			</Options>
+		</InventoryItem>
+	</InventoryItems>
+</ObjectClick>

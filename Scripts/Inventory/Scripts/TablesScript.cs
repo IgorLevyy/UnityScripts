@@ -1,4 +1,5 @@
 ﻿using EProjectNS;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -6,6 +7,7 @@ public class TablesScript : MonoBehaviour
 {
     public Vector3 localRotation;
     public Vector3 localPosition;
+    public List<string> inventoryName;
     private bool light = false;
 
     void Start()
@@ -33,10 +35,12 @@ public class TablesScript : MonoBehaviour
         //Debug.Log(gameObject);
         InitSceneScript scriptSetActive = GameObject.Find("Player").GetComponent<InitSceneScript>();
         EProject eProject = scriptSetActive.eProject;
+        EProjectNS.InventoryItem curItem = eProject.InventoryItemCurrent;
 
-        if (eProject.InventoryItemCurrent != null)
+        if (curItem != null)
         {
-            light = true;
+            if(inventoryName.Contains(curItem.Title))
+                light = true;
         }
     }
     void OnMouseExit()

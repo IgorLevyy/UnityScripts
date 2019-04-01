@@ -5,6 +5,9 @@ using UnityEvent_Api;
 
 using System.Reflection;
 using System.Collections.Generic;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 //using Microsoft.Practices.Unity;
 //using Microsoft.Practices.Unity;
 //using System.Collections;
@@ -93,6 +96,17 @@ public class InitSceneScript : MonoBehaviour {
         //Список предметов, которых, необходимо отобразить на столе.
         string gOb = "Табличка <Не влезай, убьет>|Табличка <Заземлено>|УВНУ-10 ДК_2019_01_28|УНН-1ДС3|Патрон предохранителя_инвентарь|Табличка <Не включать, работают люди>";
         unityApiScript.GetInventory(gOb);
+
+        //foreach (var item in ss.inventoryItems)
+        //{
+        //    foreach (var item1 in item.options)
+        //    {
+        //        foreach (var item2 in item1.actions)
+        //        {
+        //            Vector3 vector = JsonUtility.FromJson<Vector3>(item2.parameter);
+        //        }
+        //    }
+        //}
     }
 
     void Update()
@@ -199,6 +213,7 @@ public class InitSceneScript : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
+
             gameObjectLight.SetActive(!gameObjectLight.activeSelf);
 
             //var listener = new UnityEventListener
@@ -568,4 +583,26 @@ public class InitSceneScript : MonoBehaviour {
      ////   EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
      //   EditorUtility.SetDirty(gObjectStolb);
     }
+
+
+    //public void CreateActions(TextAsset textAsset)
+    //{
+
+    //    XmlSerializer serializer = new XmlSerializer(typeof(Catalog));
+
+    //    StringReader reader = new StringReader(textAsset.text);
+
+    //    Catalog cards = serializer.Deserialize(reader) as Catalog;
+
+    //    reader.Close();
+    //}
+
+    //void CreateActions(TextAsset textAsset)
+    //{
+    //    XmlDocument xmlDoc = new XmlDocument();
+    //    if (textAsset)
+    //        xmlDoc.LoadXml(textAsset.text);
+
+    //    XmlNodeList dataList = xmlDoc.GetElementsByTagName("InventoryItem");
+    //}
 }

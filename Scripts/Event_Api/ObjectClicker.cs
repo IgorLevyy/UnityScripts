@@ -33,7 +33,7 @@ public class ObjectClicker : MonoBehaviour
                 {
                     GameObject gameObjectUnityApi = GameObject.Find("Inventory");
                     Inventory inventoryScript = gameObjectUnityApi.GetComponent<Inventory>();
-                    string invName = String.Empty;
+                    string invName = "Не определен";
 
                     InitSceneScript scriptSetActive = GameObject.Find("Player").GetComponent<InitSceneScript>();
                     EProject eProject = scriptSetActive.eProject;
@@ -49,17 +49,17 @@ public class ObjectClicker : MonoBehaviour
                     Actions.currentObject = hit.transform.gameObject.name;
 
 #warning править хардкорд удаления
-                    if (hit.transform.gameObject.transform.parent.parent.name == "Лестница Твердое тело1 1087"
-                        || hit.transform.gameObject.transform.parent.parent.name == "Табличка <Не включать, работают люди> SRF3 2")
-                    {
-                        GameObject.Destroy(hit.transform.gameObject.transform.parent.parent.gameObject);
+                    //if (hit.transform.gameObject.transform.parent.parent.name == "Лестница Твердое тело1 1087"
+                    //    || hit.transform.gameObject.transform.parent.parent.name == "Табличка <Не включать, работают люди> SRF3 2")
+                    //{
+                    //    GameObject.Destroy(hit.transform.gameObject.transform.parent.parent.gameObject);
                        
-                    }
+                    //}
 
 
-                    if (Actions.currentObject != string.Empty && Actions.inventoryTable.Count != 0)
+                    if (Actions.currentObject != string.Empty && Actions.objectClickList.inventoryItems.Count != 0)
                     {
-                        foreach (InventoryItem inventoryItem in Actions.inventoryTable)//InventoryItem определяется при выборе инвентаря
+                        foreach (InventoryItem inventoryItem in Actions.objectClickList.inventoryItems)//InventoryItem определяется при выборе инвентаря
                         {
                             if (inventoryItem.inventoryName == Actions.currentInventory)
                             {

@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
     {
         GUI.skin.font = font;
     }
+
     private void Update()
     {
         zom = Input.GetAxis("Mouse ScrollWheel");
@@ -22,9 +23,12 @@ public class Dialogue : MonoBehaviour
         if (zom < 0)
         {
             //print(currentButton);
-            if (currentDialogue < node[_currentNode].PlayerAnswer.Length - 1)
+            if(node.GetLength(0) != 0)
             {
-                currentDialogue++;
+                if (currentDialogue < node[_currentNode].PlayerAnswer.Length - 1)
+                {
+                    currentDialogue++;
+                }
             }
             // currItem = items[currentButton];
         }
