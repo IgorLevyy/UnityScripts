@@ -109,6 +109,18 @@
 						</ActionWithObject>
 					</Actions>
 				</Option>
+				<Option>
+					<TargetObject>Лестница Твердое тело1 1087</TargetObject>
+					<Actions>
+						<ActionWithObject ActionRef="" ElementRef="" InventoryItemRef="">
+							<Name>Убрать лестницу</Name>
+							<ObjectName>Лестница Твердое тело1 1087</ObjectName>
+							<LogName>Убрать</LogName>
+							<TypeEvent>DestroyObject</TypeEvent>
+							<Parameter></Parameter>
+						</ActionWithObject>
+					</Actions>
+				</Option>
 			</Options>
 		</InventoryItem>
 		<InventoryItem>
